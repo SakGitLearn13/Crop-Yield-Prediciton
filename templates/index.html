@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Yield Prediction - Revolutionizing Agriculture</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Crop Yield Prediction</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>CROP YIELD PREDICTION AND <br> PREDICTION</h2>
+            <h4>Get Informed Decisions About Farming Strategy</h4>
+        </div>
+    </section>
+
+    <section class="prediction-form">
+        <div class="container">
+            <h1>Crop Yield Predictor</h1>
+            <form id="prediction-form" method="POST" action="/predict">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="State">State</label>
+                        <select id="State" name="State" required>
+                            <option value="">Select State</option>
+                            {% for state in states %}
+                            <option value="{{ state }}">{{ state }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="District">District</label>
+                        <select id="District" name="District" required>
+                            <option value="">Select District</option>
+                        </select>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="Year">Year</label>
+                        <input type="number" id="Year" name="Year" required>
+                    </div> -->
+                    <div class="form-group">
+                        <label for="Season">Season</label>
+                        <input type="text" id="Season" name="Season" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Crop">Crop</label>
+                        <select id="Crop" name="Crop" required>
+                            <option value="">Select Crop</option>
+                            {% for crop in crops %}
+                            <option value="{{ crop }}">{{ crop }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="Fertilizer">Fertilizer</label>
+                        <input type="text" id="Fertilizer" name="Fertilizer" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Pesticide">Pesticide</label>
+                        <input type="text" id="Pesticide" name="Pesticide" required>
+                    </div> -->
+                    <div class="form-group">
+                        <label for="Avg_rainfall">Avg Rainfall (mm)</label>
+                        <input type="text" step="0.1" id="Avg_rainfall" name="Avg_rainfall" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Temperature">Temperature (°C)</label>
+                        <input type="text" step="0.1" id="Temperature" name="Temperature" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Area">Area (ha)</label>
+                        <input type="text" step="0.1" id="Area" name="Area" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Production">Production</label>
+                        <input type="text" step="0.1" id="Production" name="Production" required>
+                    </div>
+                </div>
+                <div class="form-group button-center">
+                    <button type="submit">PREDICT</button>
+                </div>
+            </form>
+            {% if result %}
+            <div class="result">
+                <h2>Predicted Yield: {{ result *10 }} (quintal/hectare) </h2>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Crop Yield Prediction</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>
