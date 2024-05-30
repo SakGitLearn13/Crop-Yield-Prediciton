@@ -47,10 +47,6 @@
                             <option value="">Select District</option>
                         </select>
                     </div>
-                    <!-- <div class="form-group">
-                        <label for="Year">Year</label>
-                        <input type="number" id="Year" name="Year" required>
-                    </div> -->
                     <div class="form-group">
                         <label for="Season">Season</label>
                         <input type="text" id="Season" name="Season" required>
@@ -84,10 +80,6 @@
                         <label for="Area">Area (ha)</label>
                         <input type="text" step="0.1" id="Area" name="Area" required>
                     </div>
-                    <div class="form-group">
-                        <label for="Production">Production</label>
-                        <input type="text" step="0.1" id="Production" name="Production" required>
-                    </div>
                 </div>
                 <div class="form-group button-center">
                     <button type="submit">PREDICT</button>
@@ -95,7 +87,7 @@
             </form>
             {% if result %}
             <div class="result">
-                <h2>Predicted Yield: {{ result *10 }} (quintal/hectare) </h2>
+                <h2>Predicted Yield: {{ result }} (tonnes/hectare) </h2>
             </div>
             {% endif %}
         </div>

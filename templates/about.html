@@ -1,224 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - Crop Yield Prediction</title>
-    <link rel="stylesheet" href="static/style.css">
-    <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            height: 100%;
-        }
+    <link rel="stylesheet" href="static/about.css" />
+  </head>
 
-        body {
-            background-image: url('img/img6.jpg');
-            /* Add your background image here */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            height: 100%;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            overflow: hidden;
-
-        }
-
-        .container h2 {
-            font-size: 55px;
-            color: white;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .container h2 p {
-            font-size: 26px;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-
-        }
-
-        header h1 {
-            float: left;
-            margin: 0;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            float: right;
-            display: inline;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-left: 20px;
-            float: left;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 20px;
-            padding: 10px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .about-us,
-        .team-section {
-            /* background-color: rgba(255, 255, 255, 0.8);  Semi-transparent background */
-            border-radius: 10px;
-            margin: 20px 0;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .about-us h2,
-        .team-section h2 {
-            font-size: 46px;
-            margin-bottom: 20px;
-            color: black;
-
-        }
-
-        .about-us p,
-        .team-section p {
-            font-size: 22px;
-            margin-bottom: 20px;
-            color: black;
-
-        }
-
-        .team-section .team-member {
-            display: inline-block;
-            width: 30%;
-            margin: 20px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            --tw-shadow-color: #475569;
-        }
-
-        .team-section .team-member img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        .team-section .team-member h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .team-section .team-member p {
-            font-size: 16px;
-            color: #555;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        section h3 {
-            text-align: center;
-            font-size: 39px;
-            color: black;
-        }
-    </style>
-</head>
-
-<body>
-
+  <body>
     <header>
-        <div class="container">
-            <h1>Crop Yield Prediction</h1>
-            <nav>
-                <ul>
-                    <li><a href="{{ url_for('index') }}">Home</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="{{ url_for('about') }}">About Us</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container">
+        <h1>Crop Yield Prediction</h1>
+        <nav>
+          <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <section class="about-us">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Welcome to Crop Yield Prediction, where we revolutionize agriculture through cutting-edge technology and
-                data-driven insights. Our mission is to empower farmers and agronomists with accurate crop yield
-                predictions, soil health analysis, and precise weather forecasting tools to optimize agricultural
-                productivity and sustainability.</p>
-            <p>Our team of experts is dedicated to providing innovative solutions that help you make informed decisions
-                about your farming strategies, ensuring better yields and sustainable farming practices.</p>
-        </div>
+      <div class="container">
+        <h2>About Us</h2>
+        <p style="font-size: 25px;">
+          Welcome to Crop Yield Prediction, where we revolutionize agriculture
+          through cutting-edge technology and data-driven insights. Our mission
+          is to empower farmers and agronomists with accurate crop yield
+          predictions, soil health analysis, and precise weather forecasting
+          tools to optimize agricultural productivity and sustainability.
+        </p>
+        <p style="font-size: 25px;">
+          Our team of experts is dedicated to providing innovative solutions
+          that help you make informed decisions about your farming strategies,
+          ensuring better yields and sustainable farming practices.
+        </p>
+      </div>
     </section>
     <section>
-        <h3>Under supervised By: Ashutosh Pandey</h3>
+      <h3>Under supervised By: Mr. Ashutosh Pandey</h3>
     </section>
     <section class="team-section">
-        <div class="container">
-            <h2>Meet Our Team</h2>
-            <div class="team-member">
-                <img src="img/img1.jpg" alt="Team Member 1">
-                <h3>Saksham Srivastava</h3>
-                <p>Founder & CEO</p>
-                <p>John is a visionary leader with a passion for leveraging technology to improve agricultural
-                    practices. With over 20 years of experience in the industry, he leads our team with dedication and
-                    expertise.</p>
-            </div>
-            <div class="team-member">
-                <img src="img/img9.jpg" alt="Team Member 2">
-                <h3>Deepanshu Ydav</h3>
-                <p>Chief Data Scientist</p>
-                <p>Jane is an expert in data analytics and machine learning. She drives the development of our advanced
-                    algorithms, ensuring the accuracy and reliability of our predictions.</p>
-            </div>
-            <div class="team-member">
-                <img src="img/img3.jpg" alt="Team Member 3">
-                <h3>Muhammad Taha</h3>
-                <p>Head of Research</p>
-                <p>Emily leads our research efforts, focusing on sustainable farming practices and innovative solutions
-                    to enhance crop yield. Her work is pivotal in driving our mission forward.</p>
-            </div>
-            <div class="team-member">
-                <img src="img/img11.png" alt="Team Member 3">
-                <h3>Muhammad Gulam Gaush</h3>
-                <p>Head of Research</p>
-                <p>Emily leads our research efforts, focusing on sustainable farming practices and innovative solutions
-                    to enhance crop yield. Her work is pivotal in driving our mission forward.</p>
-            </div>
+      <div class="container">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+          <img src="../static/img/img1.jpg" alt="Team Member 1" />
+          <h3>Saksham Srivastava</h3>
         </div>
+        <div class="team-member">
+          <img src="../static/img/img9.jpg" alt="Team Member 2" />
+          <h3>Deepanshu Ydav</h3>
+        </div>
+        <div class="team-member">
+          <img src="../static/img/img3.jpg" alt="Team Member 3" />
+          <h3>Muhammad Taha</h3>
+        </div>
+        <div class="team-member">
+          <img src="../static/img/img11.png" alt="Team Member 3" />
+          <h3>Muhammad Gulam Gaush</h3>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Crop Yield Prediction</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2024 Crop Yield Prediction</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

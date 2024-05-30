@@ -2,7 +2,6 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-image: url('img/img4.jpg');
-    /* Background image added */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
